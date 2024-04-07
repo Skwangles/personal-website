@@ -17,7 +17,7 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #c9ada7;
+  background-color: #6536a1;
 }
 
 .app__footer {
@@ -32,7 +32,7 @@ main {
   padding: 7px;
   border: 1.5px solid white;
   border-radius: 5px;
-  background-color: #ceb5b0;
+  background-color: #703db4;
 }
 
 .app__footer-text {

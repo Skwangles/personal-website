@@ -5,6 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 
 import IconLinks from "./components/IconLinks";
 import styles from "./HomePage.module.css";
+import Demos from "./components/DemoProjects";
+import { Divide } from "react-feather";
 
 const HomePage = () => {
   const splitter = new GraphemeSplitter();
@@ -25,11 +27,11 @@ const HomePage = () => {
           className={styles.type}
           splitter={(str) => splitter.splitGraphemes(str)}
           sequence={[
-            "Can code features and pat cats 🐈",
+            "Codes stuff and pats cats 🐈",
             5000,
-            "umpire hockey every week 🏑",
+            "Umpires hockey every week 🏑",
             2000,
-            "and love to explore the local nature 🌳",
+            "Loves to explore nature 🌳",
             5000,
           ]}
           wrapper="span"
@@ -45,6 +47,9 @@ const HomePage = () => {
       </div>
 
       <IconLinks />
+      <hr style={{width: '15px', color: 'white', height:'1px', borderWidth:'0', backgroundColor:'white'}}/>
+      <Demos />
+      Fun projects
     </div>
   );
 };
