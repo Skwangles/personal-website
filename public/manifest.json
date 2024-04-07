@@ -3,7 +3,7 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "flat-white.png",
+      "src": "whistle.png",
       "type": "image/png",
       "sizes": "512x512"
     }
