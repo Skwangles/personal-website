@@ -13,11 +13,11 @@ const HomePage = () => {
     <div className={styles.homePage}>
       <a
         className={styles.homePageNameHeading}
-        href="https://en.wikipedia.org/wiki/Flat_white"
+        href="https://en.wikipedia.org/wiki/Cat"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Bhavit Wadhwa
+        Alexander Stokes
       </a>
 
       <div className={styles.typeContainer}>
@@ -25,11 +25,11 @@ const HomePage = () => {
           className={styles.type}
           splitter={(str) => splitter.splitGraphemes(str)}
           sequence={[
-            "I can turn coffee ☕ into code ✨",
+            "Can code features and pat cats 🐈",
             5000,
-            "currently learning to snowboard 🏂",
+            "umpire hockey every week 🏑",
             2000,
-            "and I'm most happy when I'm out hiking 🥾",
+            "and love to explore the local nature 🌳",
             5000,
           ]}
           wrapper="span"
