@@ -9,7 +9,7 @@ const IconLinks = () => {
     <div className={styles.container}>
       <a
         className={styles.icon}
-        href="https://www.linkedin.com/in/bhavit-wadhwa/"
+        href="https://www.linkedin.com/in/xanderstokes/"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -18,7 +18,7 @@ const IconLinks = () => {
 
       <a
         className={styles.icon}
-        href="https://github.com/wa-bha"
+        href="https://github.com/skwangles"
         target="_blank"
         rel="noopener noreferrer"
       >
