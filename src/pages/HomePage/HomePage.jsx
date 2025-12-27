@@ -48,8 +48,8 @@ const HomePage = () => {
 
       <IconLinks />
       <hr style={{width: '15px', color: 'white', height:'1px', borderWidth:'0', backgroundColor:'white'}}/>
+      <h2 className={styles.sectionTitle}>Fun projects</h2>
       <Demos />
-      Fun projects
     </div>
   );
 };
