@@ -7,8 +7,15 @@
 .icon {
   padding: 0.75rem 0.75rem 0.3rem 0.75rem;
   transition: background-color 0.3s ease;
+  -webkit-tap-highlight-color: rgba(206, 181, 176, 0.3);
+  touch-action: manipulation;
 
   &:hover {
+    border-radius: 0.5rem;
+    background-color: #ceb5b0;
+  }
+
+  &:active {
     border-radius: 0.5rem;
     background-color: #ceb5b0;
   }

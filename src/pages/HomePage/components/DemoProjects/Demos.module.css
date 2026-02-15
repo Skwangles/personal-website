@@ -16,11 +16,35 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: rgba(206, 181, 176, 0.1);
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(206, 181, 176, 0.3);
+  touch-action: manipulation;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+/* Hover only on devices that support it (not touch-only) */
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card:hover .previewImage {
+    transform: scale(1.05);
+  }
+
+  .card:hover .iconOverlay {
+    background-color: rgba(206, 181, 176, 0.9);
+  }
+}
+
+/* Touch feedback for mobile */
+.card:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:active .iconOverlay {
+  background-color: rgba(206, 181, 176, 0.9);
 }
 
 .imageContainer {
@@ -40,10 +64,6 @@
   transition: transform 0.3s ease;
 }
 
-.card:hover .previewImage {
-  transform: scale(1.05);
-}
-
 .iconOverlay {
   position: absolute;
   top: 0.75rem;
@@ -55,10 +75,6 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease;
-}
-
-.card:hover .iconOverlay {
-  background-color: rgba(206, 181, 176, 0.9);
 }
 
 .cardContent {
@@ -80,8 +96,48 @@
   color: rgba(250, 247, 246, 0.8);
 }
 
+/* Tablet: two columns */
 @media (max-width: 768px) {
   .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile: single column, larger touch targets */
+@media (max-width: 600px) {
+  .container {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 0.75rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .card {
+    min-height: 44px;
+  }
+
+  .cardContent {
+    padding: 1rem 1.25rem;
+  }
+
+  .cardTitle {
+    font-size: 1.05rem;
+  }
+
+  .cardDescription {
+    font-size: 0.85rem;
+  }
+}
+
+/* Very small screens: prevent overflow */
+@media (max-width: 380px) {
+  .container {
+    gap: 1rem;
+  }
+
+  .cardContent {
+    padding: 0.75rem 1rem;
   }
 }
